@@ -25,7 +25,7 @@ Qual o tratamento tópico mais usado?	Tiabendazol
 Qual a opção oral para casos mais graves?	Albendazol ou ivermectina
 Como prevenir a infecção por Ancylostoma braziliense?	Evitar andar descalço em praias com presença de cães e gatos
 Qual o maior nematódeo intestinal humano?	Ascaris lumbricoides
-Qual a forma infectante do Ascaris lumbricoides?	Ovo embrionado com larva L2
+Qual a forma infectante do Ascaris lumbricoides?	Ovo embrionado com larva L3
 Como ocorre a transmissão da ascaridíase?	Ingestão de ovos embrionados com água ou alimentos contaminados
 Quais órgãos são percorridos pela larva antes de chegar ao intestino?	Intestino → fígado → pulmões → árvore brônquica → deglutição → intestino
 Qual manifestação pulmonar pode surgir na fase larval?	Síndrome de Loeffler
@@ -83,7 +83,7 @@ Quem é o hospedeiro definitivo da Toxocara canis?	Cães
 Como o ser humano se infecta com Toxocara canis?	Ingestão de ovos embrionados presentes em solo contaminado com fezes de cães
 Qual a faixa etária mais vulnerável à toxocaríase?	Crianças
 O ser humano elimina ovos nas fezes em infecções por Toxocara?	Não, pois não há vermes adultos em humanos
-Qual a forma infectante da Toxocara canis?	Ovo embrionado com larva L2
+Qual a forma infectante da Toxocara canis?	Ovo embrionado com larva 
 O que ocorre após a ingestão do ovo infectante?	Larva eclode no intestino e migra por diversos órgãos, sem completar o ciclo
 Quais os principais órgãos afetados na larva migrans visceral?	Fígado, pulmões, olhos e sistema nervoso central
 Quais os sintomas típicos da forma visceral?	Febre, dor abdominal, tosse, hepatoesplenomegalia e eosinofilia intensa
