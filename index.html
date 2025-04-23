@@ -6,7 +6,7 @@ async function startReview() {
       }
 
       if (!loadState()) {
-        const res = await fetch('Parasito.txt?v=' + Date.now());
+        const res = await fetch('parasito2.txt?v=2' + Date.now());
         const text = await res.text();
         parseText(text);
         current = 0;
