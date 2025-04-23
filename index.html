@@ -96,15 +96,9 @@
       saveState();
       showCard();
     });
-async function startReview() {
-      // Força update se versão for diferente
-      if (localStorage.getItem('flashcardsVersion') !== 'v2') {
-        localStorage.removeItem('flashcardsState');
-        localStorage.setItem('flashcardsVersion', 'v2');
-      }
 
       if (!loadState()) {
-        const res = await fetch('parasito2.txt?v=2' + Date.now());
+        const res = await fetch('parasito2.txt');
         const text = await res.text();
         parseText(text);
         current = 0;
