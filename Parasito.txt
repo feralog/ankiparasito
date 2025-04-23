@@ -6,7 +6,7 @@ Como ocorre a principal via de infecção pelo Ancylostoma duodenale?	Penetraç�
 Qual a morfologia típica do macho do Ancylostoma duodenale?	Menor que a fêmea e possui bolsa copulatória
 O que caracteriza o ovo do Ancylostoma duodenale?	Ovo morulado, indistinguível dos de Necator americanus
 Qual a forma infectante do Ancylostoma duodenale?	Larva L3 filarioide
-Qual a manifestação clínica na pele pela larva L3?	"Erupção cutânea, conhecida como &#x27;coceira do amarelão&#x27;"
+Qual a manifestação clínica na pele pela larva L3?	"Erupção cutânea, conhecida como coceira do amarelão"
 Qual síndrome respiratória pode ocorrer na fase pulmonar?	Síndrome de Loeffler
 Como Ancylostoma duodenale causa anemia?	Sucção de sangue pela cápsula bucal com dentes cortantes
 Quais exames auxiliam no diagnóstico?	Coproparasitológico e hemograma com eosinofilia e anemia microcítica
@@ -130,7 +130,7 @@ Quais as principais características morfológicas do macho?	Menor que a fêmea 
 Como é a cápsula bucal do Necator americanus?	Possui lâminas cortantes para aderência e sucção de sangue
 Como são os ovos eliminados nas fezes?	Ovos morulados, indistinguíveis dos de Ancylostoma
 Qual a sequência de desenvolvimento larval no ambiente?	L1 → L2 → L3 (forma infectante)
-Quais os sintomas da fase cutânea?	"Prurido, eritema, dermatite – conhecida como &#x27;coceira do amarelão&#x27;"
+Quais os sintomas da fase cutânea?	"Prurido, eritema, dermatite – conhecida como coceira do amarelão"
 Qual síndrome pode surgir na fase pulmonar?	Síndrome de Loeffler
 Como o verme causa anemia?	Lesiona a mucosa intestinal e suga sangue, levando à perda crônica
 Quais achados laboratoriais são típicos?	Eosinofilia, anemia microcítica hipocrômica
