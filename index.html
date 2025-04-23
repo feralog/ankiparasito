@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anki Reviewer Web</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; }
+    #controls, #review { text-align: center; margin-top: 2rem; }
+    #question, #answer { font-size: 1.25rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; margin: 1rem 0; }
+    .btn { padding: 0.5rem 1rem; margin: 0.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-show { background: #007bff; color: #fff; }
+    .btn-rate { background: #28a745; color: #fff; }
+    .rating { display: none; margin-top: 1rem; }
+  </style>
+  <!-- Import libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+</head>
+<body>
+  <h1>Anki Reviewer Web</h1>
+  <div id="controls">
+    <button id="load-default" class="btn">Carregar Deck Padrão</button>
+    <input type="file" id="file-input" accept=".apkg" />
+  </div>
+
+  <div id="review" style="display:none;">
+    <div id="question"></div>
+    <button id="show-answer" class="btn btn-show">Mostrar Resposta</button>
+    <div id="answer"></div>
+    <div class="rating" id="rating-buttons">
+      <button class="btn btn-rate" data-rate="again">Aprender Novamente</button>
+      <button class="btn btn-rate" data-rate="good">Bom</button>
+      <button class="btn btn-rate" data-rate="easy">Fácil</button>
+    </div>
+    <div id="progress"></div>
+  </div>
+
+  <script>
+    let db, cards = [], current = 0;
+
+    async function initSqlJsLib() {
+      return await initSqlJs({ locateFile: file => 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/' + file });
+    }
+
+    function saveState() {
+      localStorage.setItem('ankiReviewer', JSON.stringify({ cards, current }));
+    }
+    function loadState() {
+      const s = localStorage.getItem('ankiReviewer');
+      if (s) {
+        const st = JSON.parse(s);
+        cards = st.cards; current = st.current;
+        return true;
+      }
+      return false;
+    }
+
+    function showCard() {
+      if (current >= cards.length) {
+        document.getElementById('question').textContent = 'Revisão concluída!';
+        document.getElementById('show-answer').style.display = 'none';
+        return;
+      }
+      document.getElementById('question').textContent = cards[current].q;
+      document.getElementById('answer').textContent = '';
+      document.getElementById('rating-buttons').style.display = 'none';
+      document.getElementById('show-answer').style.display = 'inline-block';
+      updateProgress();
+    }
+    function updateProgress() {
+      document.getElementById('progress').textContent = `Carta ${current+1} de ${cards.length}`;
+    }
+
+    document.getElementById('show-answer').onclick = () => {
+      document.getElementById('answer').textContent = cards[current].a;
+      document.getElementById('rating-buttons').style.display = 'block';
+      document.getElementById('show-answer').style.display = 'none';
+    };
+
+    document.querySelectorAll('.btn-rate').forEach(btn => btn.onclick = () => {
+      cards[current].rated = btn.dataset.rate;
+      current++;
+      saveState();
+      showCard();
+    });
+
+    async function processApkg(buffer) {
+      const zip = await JSZip.loadAsync(buffer);
+      const sqlPromise = initSqlJsLib();
+      const dbFile = await zip.file('collection.anki2').async('arraybuffer');
+      const SQL = await sqlPromise;
+      db = new SQL.Database(new Uint8Array(dbFile));
+      const rows = db.exec("SELECT id, nid FROM cards WHERE type=0");
+      if (!rows.length) return;
+      const cardRows = db.exec("SELECT id, nid FROM cards WHERE type=0")[0].values;
+      const noteMap = new Map(db.exec("SELECT id, flds FROM notes")[0].values);
+      cards = cardRows.map(([cid, nid]) => {
+        const flds = noteMap.get(nid).split('\u001f');
+        return { id: cid, q: flds[0], a: flds[1] || '', rated: null };
+      });
+      current = 0;
+      saveState();
+      document.getElementById('controls').style.display = 'none';
+      document.getElementById('review').style.display = 'block';
+      showCard();
+    }
+
+    document.getElementById('load-default').onclick = () => {
+      if (loadState()) {
+        document.getElementById('controls').style.display = 'none';
+        document.getElementById('review').style.display = 'block';
+        showCard();
+      } else {
+        fetch('deck.apkg')
+          .then(res => res.arrayBuffer())
+          .then(processApkg);
+      }
+    };
+
+    document.getElementById('file-input').onchange = e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => processApkg(reader.result);
+      reader.readAsArrayBuffer(file);
+    };
+
+    // On page load, attempt to restore if desired
+    window.onload = () => {
+      // nothing here; controls await user action
+    };
+  </script>
+</body>
+</html>
