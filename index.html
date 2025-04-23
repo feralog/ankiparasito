@@ -27,7 +27,7 @@
     <button id="show-answer" class="btn btn-show">Mostrar Resposta</button>
     <div id="answer"></div>
     <div class="rating" id="rating-buttons">
-      
+      <button class="btn btn-rate" data-rate="again">Aprender Novamente</button>
       <button class="btn btn-rate" data-rate="good">Bom</button>
       <button class="btn btn-rate" data-rate="easy">Fácil</button>
     </div>
@@ -53,18 +53,10 @@
 
     function parseText(data) {
       const lines = data.split(/\r?\n/);
-      // Encontrar separador
-      let sep = '\t'; // padrão tab
-      const sepLine = lines.find(l => l.startsWith('#separator:'));
-      if (sepLine) {
-        const key = sepLine.split(':')[1].trim().toLowerCase();
-        if (key === 'tab') sep = '\t';
-        else if (key === 'comma') sep = ',';
-        else if (key === 'semicolon') sep = ';';
-        else sep = key; // usa o literal
-      }
-      // Filtrar linhas de dados (ignora comentários)
+      let sep = '\t'; // always use tab to split question/answer
+      // filter out comments
       const raw = lines.filter(l => l && !l.startsWith('#'));
+      // parse in original file order, no shuffling
       cards = raw.map(line => {
         const parts = line.split(sep);
         return { q: parts[0].trim(), a: (parts[1] || '').trim(), rated: null };
@@ -115,7 +107,7 @@
       if (!loadState()) {
         const res = await fetch('Parasito.txt');
         const text = await res.text();
-        parseText(text);
+        parseText(text); // load in strict file order
         current = 0;
         saveState();
       }
