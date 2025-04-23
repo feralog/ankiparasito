@@ -20,6 +20,7 @@
 
   <div id="controls">
     <button id="start-review" class="btn btn-start">Iniciar Revisão</button>
+    <button id="reset-data" class="btn btn-rate">Reiniciar cards/resetar dados</button>
   </div>
 
   <div id="review" style="display:none;">
@@ -27,9 +28,7 @@
     <button id="show-answer" class="btn btn-show">Mostrar Resposta</button>
     <div id="answer"></div>
     <div class="rating" id="rating-buttons">
-     
       <button class="btn btn-rate" data-rate="good">Bom</button>
-     
     </div>
     <div id="progress"></div>
   </div>
@@ -105,7 +104,7 @@
 
     async function startReview() {
       if (!loadState()) {
-        const res = await fetch('parasito2.txt');
+        const res = await fetch('Parasito.txt');
         const text = await res.text();
         parseText(text); // load in strict file order
         current = 0;
@@ -117,6 +116,17 @@
     }
 
     document.getElementById('start-review').onclick = startReview;
+
+    // reset data handler
+    document.getElementById('reset-data').onclick = () => {
+      // clear localStorage
+      localStorage.clear();
+      // clear all cookies
+      document.cookie.split(';').forEach(c => {
+        document.cookie = c.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;';
+      });
+      alert('Dados reiniciados. Por favor, atualize a página.');
+    };
   </script>
 </body>
 </html>
