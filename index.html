@@ -107,8 +107,10 @@
     });
 
     async function startReview() {
-      if (!loadState()) {
-        const res = await fetch('parasito2.txt?v=' +Date.now);
+      if (!loadState() || localStorage.getItem('flashcardsVersion') !== 'v2') {
+  localStorage.removeItem('flashcardsState');
+  localStorage.setItem('flashcardsVersion', 'v2'); {
+        const res = await fetch('parasito2.txt?v=2' +Date.now);
         const text = await res.text();
         parseText(text); // load in strict file order
         current = 0;
