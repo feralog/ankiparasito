@@ -53,12 +53,21 @@
 
     function parseText(data) {
       const lines = data.split(/\r?\n/);
-      const sepLine = lines.find(l => l.startsWith('#separator:')) || '';
-      const sep = sepLine.split(':')[1] || '\t';
+      // Encontrar separador
+      let sep = '\t'; // padrão tab
+      const sepLine = lines.find(l => l.startsWith('#separator:'));
+      if (sepLine) {
+        const key = sepLine.split(':')[1].trim().toLowerCase();
+        if (key === 'tab') sep = '\t';
+        else if (key === 'comma') sep = ',';
+        else if (key === 'semicolon') sep = ';';
+        else sep = key; // usa o literal
+      }
+      // Filtrar linhas de dados (ignora comentários)
       const raw = lines.filter(l => l && !l.startsWith('#'));
       cards = raw.map(line => {
         const parts = line.split(sep);
-        return { q: parts[0], a: parts[1] || '', rated: null };
+        return { q: parts[0].trim(), a: (parts[1] || '').trim(), rated: null };
       });
     }
 
