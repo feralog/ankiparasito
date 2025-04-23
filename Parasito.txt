@@ -1,0 +1,139 @@
+#separator:tab
+#html:true
+Qual o agente causador do amarelão com dentes cortantes?	Ancylostoma duodenale
+Onde o Ancylostoma duodenale habita?	Intestino delgado
+Como ocorre a principal via de infecção pelo Ancylostoma duodenale?	Penetração ativa da larva L3 pela pele
+Qual a morfologia típica do macho do Ancylostoma duodenale?	Menor que a fêmea e possui bolsa copulatória
+O que caracteriza o ovo do Ancylostoma duodenale?	Ovo morulado, indistinguível dos de Necator americanus
+Qual a forma infectante do Ancylostoma duodenale?	Larva L3 filarioide
+Qual a manifestação clínica na pele pela larva L3?	"Erupção cutânea, conhecida como &#x27;coceira do amarelão&#x27;"
+Qual síndrome respiratória pode ocorrer na fase pulmonar?	Síndrome de Loeffler
+Como Ancylostoma duodenale causa anemia?	Sucção de sangue pela cápsula bucal com dentes cortantes
+Quais exames auxiliam no diagnóstico?	Coproparasitológico e hemograma com eosinofilia e anemia microcítica
+Quais são os principais medicamentos usados no tratamento?	Albendazol ou mebendazol
+Qual a principal medida de prevenção?	Controle do vetor e uso de mosquiteiros
+Qual o principal agente causador da larva migrans cutânea?	Ancylostoma braziliense
+Quem são os hospedeiros definitivos do Ancylostoma braziliense?	Cães e gatos
+O ser humano é hospedeiro definitivo ou acidental para Ancylostoma braziliense?	Hospedeiro acidental
+Qual a forma infectante do Ancylostoma braziliense?	Larva L3 filarioide
+Como ocorre a infecção humana por Ancylostoma braziliense?	Penetração da larva L3 pela pele ao andar descalço
+Por que o ciclo do Ancylostoma braziliense não se completa em humanos?	Porque o ser humano é um hospedeiro inadequado
+Qual manifestação cutânea típica ocorre em humanos?	Larva migrans cutânea, lesão serpiginosa pruriginosa
+Qual o diagnóstico para Ancylostoma braziliense em humanos?	Clínico, baseado em lesão cutânea característica
+Há eliminação de ovos nas fezes humanas infectadas?	Não, pois o parasito não atinge o intestino humano
+Qual o tratamento tópico mais usado?	Tiabendazol
+Qual a opção oral para casos mais graves?	Albendazol ou ivermectina
+Como prevenir a infecção por Ancylostoma braziliense?	Evitar andar descalço em praias com presença de cães e gatos
+Qual o maior nematódeo intestinal humano?	Ascaris lumbricoides
+Qual a forma infectante do Ascaris lumbricoides?	Ovo embrionado com larva L2
+Como ocorre a transmissão da ascaridíase?	Ingestão de ovos embrionados com água ou alimentos contaminados
+Quais órgãos são percorridos pela larva antes de chegar ao intestino?	Intestino → fígado → pulmões → árvore brônquica → deglutição → intestino
+Qual manifestação pulmonar pode surgir na fase larval?	Síndrome de Loeffler
+Quais são as complicações intestinais associadas a alta carga parasitária?	Obstrução intestinal, perfuração, migração aberrante
+Como é feito o diagnóstico de ascaridíase?	Coproparasitológico com identificação de ovos
+Quais tipos de ovos podem ser encontrados nas fezes?	Ovos férteis, inférteis e decorticados
+Qual medicamento é indicado para tratamento em geral?	Albendazol ou mebendazol
+Qual medicamento pode ser usado em obstruções?	Piperazina
+Quais medidas profiláticas são recomendadas?	Higiene, lavar alimentos e tratar a água, saneamento básico
+Qual parasita causa a oxiurose?	Enterobius vermicularis
+Qual a principal faixa etária afetada pela oxiurose?	Crianças
+Qual a forma infectante do Enterobius vermicularis?	Ovo contendo larva L3
+Qual é a principal via de transmissão?	Fecal-oral direta ou por fômites
+Onde a fêmea do Enterobius ovopostula?	Região perianal, principalmente à noite
+Qual o principal sintoma da oxiurose?	Prurido anal noturno
+Qual exame é utilizado para o diagnóstico?	Método da fita gomada (Graham)
+Por que o exame de fezes pode ser negativo?	Porque os ovos são depositados na região perianal, não nas fezes
+Qual o formato típico do ovo do Enterobius?	Assimétrico, casca fina, achatado de um lado
+Qual o tratamento indicado para Enterobius vermicularis?	Albendazol com repetição após 2 semanas
+Quais medidas de prevenção são importantes?	Higiene das mãos, unhas, roupas íntimas e de cama, evitar coçar a região perianal
+Qual parasita causa a estrongiloidíase?	Strongyloides stercoralis
+Qual a forma infectante do Strongyloides stercoralis?	Larva L3 filarioide
+Qual a forma eliminada nas fezes?	Larva L1 rabditóide
+Qual é uma característica única do ciclo biológico desse parasita?	Capacidade de autoinfecção e ciclo de vida livre
+Quais são os locais de passagem da larva após penetração?	Pele → corrente sanguínea → pulmões → traqueia → intestino
+Qual manifestação cutânea típica pode ocorrer?	Dermatite ou larva currens
+O que é a síndrome de hiperinfecção?	Forma grave com disseminação larval e risco de sepse
+Qual o exame mais eficaz para diagnóstico parasitológico?	Método de Baermann-Moraes ou agar-nutriente com trilhas larvais
+Qual marcador hematológico é comum na infecção crônica?	Eosinofilia persistente
+Qual o tratamento de escolha?	Ivermectina
+Qual o cuidado em pacientes imunossuprimidos?	Rastreio e tratamento prévio para evitar hiperinfecção
+Quais medidas preventivas são eficazes?	Saneamento básico, uso de calçados e rastreio em imunodeprimidos
+Qual parasita é conhecido como verme chicote?	Trichuris trichiura
+Qual a principal forma de transmissão da tricuríase?	Ingestão de ovos embrionados com alimentos ou água contaminados
+Em que região do corpo o Trichuris se aloja?	Intestino grosso, principalmente no ceco
+Qual a principal faixa etária afetada pela tricuríase?	Crianças em idade escolar
+Como é a morfologia do verme adulto?	Porção anterior fina e posterior espessa, lembrando um chicote
+Qual o tamanho médio das fêmeas de Trichuris?	Até 5 cm
+Como são os ovos de Trichuris trichiura?	Marrom, casca espessa com dois tampões mucosos nas extremidades
+Quantas semanas os ovos levam para se tornar infectantes no solo?	2 a 3 semanas
+Qual é a forma infectante do Trichuris trichiura?	Ovo embrionado com larva L1
+Como é a evolução do ciclo após ingestão dos ovos?	Eclosão no intestino delgado, migração curta e fixação no intestino grosso
+O que ocorre na fase leve da infecção?	Geralmente assintomática
+Quais sintomas podem ocorrer em infecções moderadas a intensas?	Diarreia mucossanguinolenta, tenesmo, dor abdominal
+Qual sinal clínico é típico de infecção grave em crianças?	Prolapso retal
+Por que o Trichuris pode causar anemia?	Devido à perda crônica de sangue pela mucosa intestinal
+Como a tricuríase pode impactar crianças a longo prazo?	Atraso no crescimento e déficit escolar
+Qual exame é usado para diagnóstico?	Coproparasitológico com identificação dos ovos característicos
+Qual medicamento é mais usado no tratamento?	Albendazol
+Em que casos pode ser necessário prolongar o tratamento?	Infecções graves ou refratárias
+Quais medidas são eficazes na prevenção?	Saneamento básico, lavagem de alimentos, higiene pessoal
+Qual é a resposta imunológica predominante?	Th2 com IgE e IL-5
+Qual parasita é responsável pela larva migrans visceral em humanos?	Toxocara canis
+Quem é o hospedeiro definitivo da Toxocara canis?	Cães
+Como o ser humano se infecta com Toxocara canis?	Ingestão de ovos embrionados presentes em solo contaminado com fezes de cães
+Qual a faixa etária mais vulnerável à toxocaríase?	Crianças
+O ser humano elimina ovos nas fezes em infecções por Toxocara?	Não, pois não há vermes adultos em humanos
+Qual a forma infectante da Toxocara canis?	Ovo embrionado com larva L2
+O que ocorre após a ingestão do ovo infectante?	Larva eclode no intestino e migra por diversos órgãos, sem completar o ciclo
+Quais os principais órgãos afetados na larva migrans visceral?	Fígado, pulmões, olhos e sistema nervoso central
+Quais os sintomas típicos da forma visceral?	Febre, dor abdominal, tosse, hepatoesplenomegalia e eosinofilia intensa
+Qual manifestação ocular pode ocorrer?	Leucocoria, estrabismo, dor ocular e perda visual
+Qual exame laboratorial é o principal para diagnóstico?	Sorologia (ELISA anti-Toxocara)
+O que o hemograma pode revelar?	Eosinofilia intensa
+Qual o tratamento indicado para toxocaríase?	Albendazol por 5 a 10 dias
+Quando se usam corticoides no tratamento?	Em casos graves, como na forma ocular ou neurológica
+Como prevenir a toxocaríase?	Vermifugação de cães, higiene das mãos, evitar contato com solo contaminado
+Qual parasita causa a filariose linfática?	Wuchereria bancrofti
+Qual o hospedeiro definitivo da Wuchereria bancrofti?	Humano
+Quais mosquitos podem atuar como vetores?	Culex, Aedes e Anopheles
+Qual a forma infectante para o humano?	Larva L3 inoculada pela picada do mosquito
+Onde os vermes adultos se alojam?	Vasos e linfonodos linfáticos
+Como são chamadas as formas circulantes no sangue?	Microfilárias
+Quando as microfilárias estão presentes no sangue periférico?	À noite (periodicidade noturna)
+Como o mosquito adquire as microfilárias?	Pela picada em humano infectado
+Quais os principais sintomas da fase aguda?	Febre, linfangite, adenite, calafrios
+O que caracteriza a fase crônica da doença?	Obstrução linfática, edema crônico e elefantíase
+Quais estruturas são mais afetadas pela elefantíase?	Membros inferiores e bolsa escrotal
+Qual o principal exame para diagnóstico?	Pesquisa de microfilárias no sangue periférico noturno
+Quais medicamentos são utilizados no tratamento?	Dietilcarbamazina, ivermectina e albendazol
+Que outro recurso diagnóstico pode detectar vermes adultos?	Ultrassonografia de linfonodos
+Qual parasita causa a oncocercose (cegueira dos rios)?	Onchocerca volvulus
+Quem é o vetor da Onchocerca volvulus?	Mosquito simulídeo (Simulium spp.)
+Qual a forma infectante da Onchocerca volvulus?	Larva L3 inoculada pela picada do mosquito
+Onde vivem os vermes adultos em humanos?	Tecido subcutâneo, formando nódulos (onchocercomas)
+Qual o tamanho das fêmeas adultas?	Podem atingir até 50 cm
+Como se distribuem as microfilárias?	Na pele, olhos e linfonodos
+A microfilária circula no sangue?	Não, permanece em tecidos
+Quais manifestações cutâneas são típicas?	Prurido, dermatite crônica, pele de leopardo
+Qual complicação ocular pode ocorrer?	Cegueira irreversível por inflamação e danos oculares
+Quais estruturas oculares podem ser afetadas?	Córnea, íris, retina
+Qual exame é usado para detectar microfilárias?	Raspado de pele (skin snip)
+Qual o tratamento principal para microfilárias?	Ivermectina (repetida periodicamente)
+Qual antibiótico auxilia no tratamento ao eliminar a Wolbachia?	Doxiciclina
+Qual medida preventiva ajuda a controlar a doença?	Controle do vetor e programas de ivermectina em massa
+Quais medidas individuais reduzem o risco de infecção?	Uso de repelentes, roupas protetoras e evitar áreas de mosquitos
+Qual parasita é conhecido como amarelão?	Necator americanus
+Qual é a forma infectante do Necator americanus?	Larva L3 filarioide
+Como ocorre a transmissão do Necator americanus?	Penetração ativa da L3 pela pele, especialmente ao andar descalço
+Onde o verme adulto se aloja?	Intestino delgado
+Quais as principais características morfológicas do macho?	Menor que a fêmea e possui bolsa copulatória
+Como é a cápsula bucal do Necator americanus?	Possui lâminas cortantes para aderência e sucção de sangue
+Como são os ovos eliminados nas fezes?	Ovos morulados, indistinguíveis dos de Ancylostoma
+Qual a sequência de desenvolvimento larval no ambiente?	L1 → L2 → L3 (forma infectante)
+Quais os sintomas da fase cutânea?	"Prurido, eritema, dermatite – conhecida como &#x27;coceira do amarelão&#x27;"
+Qual síndrome pode surgir na fase pulmonar?	Síndrome de Loeffler
+Como o verme causa anemia?	Lesiona a mucosa intestinal e suga sangue, levando à perda crônica
+Quais achados laboratoriais são típicos?	Eosinofilia, anemia microcítica hipocrômica
+Qual o tratamento indicado?	Albendazol ou mebendazol
+O que é importante associar ao tratamento em casos de anemia?	Ferroterapia
+Como prevenir a necatoríase?	Uso de calçados, saneamento básico e educação sanitária
