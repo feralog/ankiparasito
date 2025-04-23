@@ -108,7 +108,7 @@
 
     async function startReview() {
       if (!loadState()) {
-        const res = await fetch('Parasito.txt');
+        const res = await fetch('parasito2.txt');
         const text = await res.text();
         parseText(text); // load in strict file order
         current = 0;
