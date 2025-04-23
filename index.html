@@ -37,6 +37,18 @@
   </div>
 
   <script>
+    // Suprimir prompts e avisos de atualização do Anki
+    window.alert = function(){};
+    window.confirm = function() { return true; };
+    window.prompt = function() { return null; };
+    const originalWarn = console.warn;
+    console.warn = function(msg, ...args) {
+      if (typeof msg === 'string' && msg.toLowerCase().includes('atualize para a versão mais recente do anki')) {
+        return;
+      }
+      originalWarn.call(console, msg, ...args);
+    };
+
     let db, cards = [], current = 0;
 
     async function initSqlJsLib() {
@@ -57,9 +69,27 @@
     }
 
     function showCard() {
+      // Limpar notificações de atualização
+      document.querySelectorAll('p, div, span').forEach(el => {
+        if (el.innerText.toLowerCase().includes('atualize para a versão mais recente do anki')) {
+          el.style.display = 'none';
+        }
+      });
+
       if (current >= cards.length) {
         document.getElementById('question').textContent = 'Revisão concluída!';
         document.getElementById('show-answer').style.display = 'none';
+        document.getElementById('rating-buttons').style.display = 'none';
+        // Botão Reiniciar
+        document.getElementById('answer').innerHTML = '<button id="restart" class="btn btn-show">Reiniciar Revisão</button>';
+        document.getElementById('restart').onclick = () => {
+          current = 0;
+          saveState();
+          document.getElementById('answer').textContent = '';
+          document.getElementById('show-answer').style.display = 'inline-block';
+          showCard();
+        };
+        updateProgress();
         return;
       }
       document.getElementById('question').textContent = cards[current].q;
@@ -90,9 +120,8 @@
       const sqlPromise = initSqlJsLib();
       const dbFile = await zip.file('collection.anki2').async('arraybuffer');
       const SQL = await sqlPromise;
+      // Abrir sem prompts de versão
       db = new SQL.Database(new Uint8Array(dbFile));
-      const rows = db.exec("SELECT id, nid FROM cards WHERE type=0");
-      if (!rows.length) return;
       const cardRows = db.exec("SELECT id, nid FROM cards WHERE type=0")[0].values;
       const noteMap = new Map(db.exec("SELECT id, flds FROM notes")[0].values);
       cards = cardRows.map(([cid, nid]) => {
@@ -124,11 +153,6 @@
       const reader = new FileReader();
       reader.onload = () => processApkg(reader.result);
       reader.readAsArrayBuffer(file);
-    };
-
-    // On page load, attempt to restore if desired
-    window.onload = () => {
-      // nothing here; controls await user action
     };
   </script>
 </body>
