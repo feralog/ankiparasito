@@ -1,3 +1,101 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Revisor de Flashcards</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; }
+    #controls, #review { text-align: center; margin-top: 2rem; }
+    #question, #answer { font-size: 1.25rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; margin: 1rem 0; }
+    .btn { padding: 0.5rem 1rem; margin: 0.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-start { background: #007bff; color: #fff; }
+    .btn-show { background: #17a2b8; color: #fff; }
+    .btn-rate { background: #28a745; color: #fff; }
+    .rating { display: none; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Revisor de Flashcards</h1>  <div id="controls">
+    <button id="start-review" class="btn btn-start">Iniciar Revisão</button>
+  </div>  <div id="review" style="display:none;">
+    <div id="question"></div>
+    <button id="show-answer" class="btn btn-show">Mostrar Resposta</button>
+    <div id="answer"></div>
+    <div class="rating" id="rating-buttons">
+      <button class="btn btn-rate" data-rate="again">Aprender Novamente</button>
+      <button class="btn btn-rate" data-rate="good">Bom</button>
+      <button class="btn btn-rate" data-rate="easy">Fácil</button>
+    </div>
+    <div id="progress"></div>
+  </div>  <script>
+    let cards = [], current = 0;
+
+    function saveState() {
+      localStorage.setItem('flashcardsState', JSON.stringify({ cards, current }));
+    }
+    function loadState() {
+      const s = localStorage.getItem('flashcardsState');
+      if (s) {
+        const st = JSON.parse(s);
+        cards = st.cards;
+        current = st.current;
+        return true;
+      }
+      return false;
+    }
+
+    function parseText(data) {
+      const lines = data.split(/\r?\n/);
+      let sep = '\t';
+      const raw = lines.filter(l => l && !l.startsWith('#'));
+      cards = raw.map(line => {
+        const parts = line.split(sep);
+        return { q: parts[0].trim(), a: (parts[1] || '').trim(), rated: null };
+      });
+    }
+
+    function showCard() {
+      if (current >= cards.length) {
+        document.getElementById('question').textContent = 'Revisão concluída!';
+        document.getElementById('show-answer').style.display = 'none';
+        document.getElementById('rating-buttons').style.display = 'none';
+        document.getElementById('answer').innerHTML = '<button id="restart" class="btn btn-start">Reiniciar Revisão</button>';
+        document.getElementById('restart').onclick = () => {
+          current = 0;
+          saveState();
+          document.getElementById('answer').textContent = '';
+          document.getElementById('show-answer').style.display = 'inline-block';
+          showCard();
+        };
+        updateProgress();
+        return;
+      }
+      document.getElementById('question').textContent = cards[current].q;
+      document.getElementById('answer').textContent = '';
+      document.getElementById('rating-buttons').style.display = 'none';
+      document.getElementById('show-answer').style.display = 'inline-block';
+      updateProgress();
+    }
+
+    function updateProgress() {
+      document.getElementById('progress').textContent = Carta ${current+1} de ${cards.length};
+    }
+
+    document.getElementById('show-answer').onclick = () => {
+      document.getElementById('answer').textContent = cards[current].a;
+      document.getElementById('rating-buttons').style.display = 'block';
+      document.getElementById('show-answer').style.display = 'none';
+    };
+
+    document.querySelectorAll('.btn-rate').forEach(btn => btn.onclick = () => {
+      cards[current].rated = btn.dataset.rate;
+      current++;
+      saveState();
+      showCard();
+    });
 async function startReview() {
       // Força update se versão for diferente
       if (localStorage.getItem('flashcardsVersion') !== 'v2') {
